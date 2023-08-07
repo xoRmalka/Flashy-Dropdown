@@ -1,0 +1,56 @@
+/* Add your component's CSS styles here */
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.dropdown-show {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.options-container {
+  height: 150px;
+  overflow-y: auto;
+}
+
+.dropdown label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.dropdown input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/*  */
+
+.collapsible-bar {
+  cursor: pointer;
+  padding: 10px;
+  /* border-bottom: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapsible-text {
+  margin-right: 10px; /*space between the text and the arrow */
+}
+
+.arrow {
+  font-size: 15px;
+}
+
+.disabled {
+  pointer-events: none; /* Disable pointer events */
+  opacity: 0.6; /* Reduce the opacity to indicate the disabled state */
+}

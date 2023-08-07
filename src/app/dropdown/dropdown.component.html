@@ -1,0 +1,32 @@
+<div class="dropdown">
+  <div
+    class="collapsible-bar"
+    [class.disabled]="disabled"
+    (click)="toggleOptionsContainer()"
+  >
+    <span class="collapsible-text">Placeholder</span>
+    <i class="arrow" [innerHTML]="showOptions ? '&#9650;' : '&#9660;'"></i>
+  </div>
+  <div class="dropdown-show" *ngIf="showOptions">
+    <input
+      *ngIf="search"
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="filterOptions()"
+      placeholder="Search..."
+    />
+    <div class="options-container">
+      <div *ngFor="let option of filteredOptions">
+        <label>
+          <input
+            type="checkbox"
+            [value]="option.id"
+            (change)="onCheckboxChange(option)"
+            [checked]="isSelected(option.id)"
+          />
+          {{ option.title }}
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
